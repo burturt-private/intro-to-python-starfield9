@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  source:
+    build: .
+    depends_on:
+      autograde:
+        condition: service_healthy
+  autograde:
+    build: autograde/
+    healthcheck:
+      test: ["CMD", "nc", "-w", "2", "localhost", "22"]
+      interval: 1s
+      timeout: 10s
+      retries: 5
