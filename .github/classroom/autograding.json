@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Test ssh exploit",
+      "setup": "",
+      "run": "./autograde/grade.sh",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}
