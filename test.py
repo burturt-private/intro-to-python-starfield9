@@ -8,7 +8,7 @@ def main():
 	ssh = paramiko.SSHClient()
 	ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 	ssh.connect('autograde', username='vuln', password='password123')
-	ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command("touch /tmp/pwdned")
+	ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command("touch /tmp/pwned")
 # while True:
 # 	pass
 if __name__ == "__main__":
